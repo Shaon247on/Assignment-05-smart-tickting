@@ -151,7 +151,8 @@
             <div class="mx-auto mt-14 lg:mt-28">
                 <div class="text-center">
                     <h1 class="text-[40px] font-bold ">P.H Paribahan</h1>
-                    <p class="lg:w-[700px] text-center mx-auto">Yes, you can run unit tests and view the results directly within the app. The integrated testing
+                    <p class="lg:w-[700px] text-center mx-auto">Yes, you can run unit tests and view the results
+                        directly within the app. The integrated testing
                         features allow for a streamlined .</p>
                 </div>
                 <!-- bottom side -->
@@ -159,7 +160,8 @@
                     <!-- left section -->
                     <div class=" w-2/3">
                         <!-- left section header  -->
-                        <div class="flex gap-3 lg:gap-0 flex-col lg:flex-row justify-start ml-[-25px] lg:ml-0 lg:justify-between mb-10 mx-auto lg:mx-0">
+                        <div
+                            class="flex gap-3 lg:gap-0 flex-col lg:flex-row justify-start ml-[-25px] lg:ml-0 lg:justify-between mb-10 mx-auto lg:mx-0">
                             <!-- left section header logo  -->
                             <div class="flex flex-col lg:flex-row gap-2 justify-center w-[300px] lg:w-[400px]">
                                 <img src="images/bus-logo.png" alt="" class="w-[80px] h-[60px]">
@@ -167,11 +169,14 @@
                                     <h2 class="text-3xl font-bold">Greenline Paribahan</h2>
                                     <p class="font-inter">Coach-009-WEB ! AC_Business</p>
                                 </div>
-                            </div>         
+                            </div>
                             <!-- left section seat count -->
-                            <div class="flex gap-1 justify-center items-center p-4 rounded-lg bg-[#1DD10026] mx-auto lg:mx-0 ml-[66px]">
+                            <div
+                                class="flex gap-1 justify-center items-center p-4 rounded-lg bg-[#1DD10026] mx-auto lg:mx-0 ml-[66px]">
                                 <div><img src="images/seat-green.png" alt=""></div>
-                                <div class="text-[#1DD100] font-medium font-inter"><p><span>40</span> Seats left</p></div>
+                                <div class="text-[#1DD100] font-medium font-inter">
+                                    <p><span>40</span> Seats left</p>
+                                </div>
                             </div>
                         </div>
                         <!-- left section info -->
@@ -182,7 +187,7 @@
                             </div>
                             <div class="flex flex-col lg:flex-row justify-between">
                                 <h4>Departure Time</h4>
-                                <h4>9:00 PM</h4> 
+                                <h4>9:00 PM</h4>
                             </div>
                             <div class="flex flex-col lg:flex-row justify-around font-inter gap-4 lg:gap-0">
                                 <h3>Boarding Point - Laxmipur</h3>
@@ -203,192 +208,208 @@
             </div>
         </section>
         <!-- seat selection section -->
-        <section >
-            <div class="grid grid-cols-2 text-center mx-auto border-2 border-red-600">
+        <section>
+            <div class="flex flex-col lg:flex-row justify-center items-center text-center mx-auto ">
                 <!-- seat selection section left side  -->
-            <div class="p-8">
-                <h2 class="text-2xl font-semibold text-start">Select Your Seat</h2>
-                <div class="flex justify-between">
-                    <div class="flex">
-                        <img src="images/seat-gray.png" alt="">
-                        <p>Available</p>
+                <div class="p-8 w-[50%]">
+                    <h2 class="text-2xl font-semibold text-start">Select Your Seat</h2>
+                    <div class="flex justify-between">
+                        <div class="flex">
+                            <img src="images/seat-gray.png" alt="">
+                            <p>Available</p>
+                        </div>
+                        <div class="flex">
+                            <img src="images/seat-green-filled.png" alt="">
+                            <p>Selected</p>
+                        </div>
                     </div>
-                    <div class="flex">
-                        <img src="images/seat-green-filled.png" alt="">
-                        <p>Selected</p>
+                    <div class="flex justify-end items-center mt-8 pr-0 lg:pr-9">
+                        <button class=" w-[80px] h-[45px] bg-[#0307121A] rounded-lg"><img src="images/wheel.svg" alt=""
+                                class="mx-auto"></button>
+                    </div>
+                    <div>
+                        <!-- sit section-->
+                        <table class="text-center w-full ">
+                            <tbody class="font-inter">
+                                <!-- A-set -->
+                                <tr class="p-3">
+                                    <td class=" text-end  rounded-lg w-[40px] h-[45px] p-[-10px]">A</td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg ">A1</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">A2</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">A3</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">A4</button></td>
+                                </tr>
+                                <!-- B-set -->
+                                <tr class="p-3">
+                                    <td class=" text-end  rounded-lg w-[40px] h-[45px] p-[-10px]">B</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg ">B1</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">B2</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">B3</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">B4</button></td>
+                                </tr>
+                                <!-- C-set -->
+                                <tr class="p-3">
+                                    <td class=" text-end  rounded-lg w-[40px] h-[45px]">C</td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg ">C1</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">C2</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">C3</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">C4</button></td>
+                                </tr>
+                                <!-- D-set -->
+                                <tr class="p-3">
+                                    <td class=" text-end  rounded-lg w-[40px] h-[45px]">D</td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg ">D1</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg ">D2</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">D3</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">D4</button></td>
+                                </tr>
+                                <!-- E-set -->
+                                <tr class="p-3">
+                                    <td class=" text-end  rounded-lg w-[40px] h-[45px]">E</td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">E1</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg ">E2</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">E3</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg ">E4</button></td>
+                                </tr>
+                                <!-- F-set -->
+                                <tr class="p-3">
+                                    <td class=" text-end  rounded-lg w-[40px] h-[45px]">F</td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">F1</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">F2</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">F3</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">F4</button></td>
+                                </tr>
+                                <!-- G-set -->
+                                <tr class="p-3">
+                                    <td class=" text-end  rounded-lg w-[40px] h-[45px]">G</td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">G1</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg ">G2</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">G3</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">G4</button></td>
+                                </tr>
+                                <!-- H-set -->
+                                <tr class="p-3">
+                                    <td class=" text-end  rounded-lg w-[40px] h-[45px]">H</td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">H1</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">H2</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">H3</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">H4</button></td>
+                                </tr>
+                                <!-- I-set -->
+                                <tr class="p-3">
+                                    <td class=" text-end  rounded-lg w-[40px] h-[45px]">I</td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">I1</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">I2</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">I3</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">I4</button></td>
+                                </tr>
+                                <!-- J-set -->
+                                <tr class="p-3">
+                                    <td class=" text-end  rounded-lg w-[40px] h-[45px]">J</td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">J1</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">J2</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">J3</button></td>
+                                    <td><button class=" w-[80px] h-[45px] rounded-lg">J4</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="grid grid-cols-5 gap-4 hidden">
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                            <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                        </div>
                     </div>
                 </div>
-                <div class="flex justify-end items-center mt-8">
-                    <button class=" w-[80px] h-[45px] bg-[#0307121A] rounded-lg"><img src="images/wheel.svg" alt="" class="mx-auto"></button>
-                </div>
-                <div>
-                    <!-- sit section-->
-                    <table class="text-center mx-auto border-2 border-red-700 w-full">
-                        <tbody class="font-inter">                            
-                            <!-- A-set -->
-                            <tr class="p-3">
-                                <td class="p-5 bg-slate-500 rounded-lg">A</td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">A1</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">A2</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">A3</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">A4</button></td>
+                <!-- seat selection section right section -->
+                <div class="p-8 border-l-4 border-[#0307124D] border-dotted">
+                    <div>
+                        <h2 class="text-2xl font-semibold text-start pb-3 border-b-2 border-dotted border-[#03071233]">
+                            Select Your Seat</h2>
+                    </div>
+                    <table class="mt-9 mb-9">
+                        <thead>
+                            <tr>
+                                <th class="text-start">Seat <span class="bg-[#1DD100] text-white px-2 rounded-full">2</span></th>
+                                <th>Class</th>
+                                <th class="text-end">Price</th>
                             </tr>
-                            <!-- B-set -->
-                            <tr class="p-3">
-                                <td class="p-5 bg-slate-500 rounded-lg">B</td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">B1</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">B2</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">B3</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">B4</button></td>
+                        </thead>
+                        <tbody class="border-t-2 border-dotted border-[#03071233]">
+                            <tr>
+                                <td class="text-start">C2</td>
+                                <td>Economoy</td>
+                                <td class="text-end">550</td>
                             </tr>
-                            <!-- C-set -->
-                            <tr class="p-3">
-                                <td class="p-5 bg-slate-500 rounded-lg">C</td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">C1</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">C2</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">C3</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">C4</button></td>
+
+                            <tr class="border-t-2 border-[#03071233] font-semibold">
+                                <td colspan="2" class="text-start ">Total Price</td>
+                                <td class="text-end">BDT 550</td>
                             </tr>
-                            <!-- D-set -->
-                            <tr class="p-3">
-                                <td class="p-5 bg-slate-500 rounded-lg">D</td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">D1</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">D2</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">D3</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">D4</button></td>
-                            </tr>
-                            <!-- E-set -->
-                            <tr class="p-3">
-                                <td class="p-5 bg-slate-500 rounded-lg">E</td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">E1</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">E2</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">E3</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">E4</button></td>
-                            </tr>
-                            <!-- F-set -->
-                            <tr class="p-3">
-                                <td class="p-5 bg-slate-500 rounded-lg">F</td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">F1</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">F2</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">F3</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">F4</button></td>
-                            </tr>
-                            <!-- G-set -->
-                            <tr class="p-3">
-                                <td class="p-5 bg-slate-500 rounded-lg">G</td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">G1</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">G2</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">G3</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">G4</button></td>
-                            </tr>
-                            <!-- H-set -->
-                            <tr class="p-3">
-                                <td class="p-5 bg-slate-500 rounded-lg">H</td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">H1</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">H2</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">H3</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">H4</button></td>
-                            </tr>
-                            <!-- I-set -->
-                            <tr class="p-3">
-                                <td class="p-5 bg-slate-500 rounded-lg">I</td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">I1</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">I2</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">I3</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">I4</button></td>
-                            </tr>
-                            <!-- J-set -->
-                            <tr class="p-3">
-                                <td class="p-5 bg-slate-500 rounded-lg">J</td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">J1</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">J2</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg ml-5">J3</button></td>
-                                <td><button class=" w-[80px] h-[45px] rounded-lg">J4</button></td>
-                            </tr>
-                        </tbody>
                     </table>
-                    <div class="grid grid-cols-5 gap-4 hidden">
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
-                        <button class=" bg-gray-500 rounded-lg">Tiny</button>
+                    <div class="flex mb-6">
+                        <input type="text" class="py-2 px-4 rounded-l-md outline-none border-0"
+                            placeholder="Have any coupon?">
+                        <button class="bg-[#1DD100] text-white py-2 px-4 rounded-lg disabled:">Apply</button> </input>
+
                     </div>
+                    <div>
+                        <table class="w-full">
+                            <tr class="font-semibold">
+                                <td colspan="2" class="text-start ">Grand Total</td>
+                                <td class="text-end">BDT 550</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <form class="grid grid-cols-1 text-start">
+                        <label for="passengerName">Passenger Name*</label>
+                        <input type="text" id="passengerName" name="passengerName" required>
+
+                        <label for="phoneNumber">Phone Number*</label>
+                        <input type="number" id="phoneNumber" name="phoneNumber" required>
+
+                        <label for="email">Email ID*</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <button class="btn bg-[#1DD100]"> Submit</button>
+                    </form>
                 </div>
-            </div>
-            <!-- seat selection section right section -->
-            <div class="p-8">
-                <div>
-                    <h2 class="text-2xl font-semibold text-start pb-3 border-b-2 border-dotted border-[#03071233]">Select Your Seat</h2>   
-                </div>
-                <table class="mt-9">
-                    <thead>
-                      <tr>
-                        <th class="text-start">Seat</th>
-                        <th>Class</th>
-                        <th class="text-end">Price</th>
-                      </tr>
-                    </thead>
-                    <tbody class="border-t-2 border-dotted border-[#03071233]">
-                      <tr>
-                        <td class="text-start">C2</td>
-                        <td>Economoy</td>
-                        <td class="text-end">550</td>
-                      </tr>
-                      
-                      <tr class="border-t-2 border-[#03071233]">
-                        <td colspan="2" class="text-start ">Total Price</td>                        
-                        <td class="text-end">BDT 550</td>
-                      </tr>
-                </table>
-                <form class="grid grid-cols-1 text-start">
-                    <label for="passengerName">Passenger Name*</label>
-                    <input type="text" id="passengerName" name="passengerName" required>
-                  
-                    <label for="phoneNumber">Phone Number*</label>
-                    <input type="number" id="phoneNumber" name="phoneNumber" required>
-                  
-                    <label for="email">Email ID*</label>
-                    <input type="email" id="email" name="email" required>
-                  
-                    <button class="btn bg-[#1DD100]"> Submit</button>
-                  </form>
-            </div>
             </div>
         </section>
 
