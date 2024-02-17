@@ -12,9 +12,105 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class="font-raleway">
+    <header>
+        <!-- navbar section -->
+        <nav class=" lg:mx-[105px]">
+            <div class="navbar bg-base-100">
+                <div class="mr-auto lg:mr-64">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <div class=" flex justify-start items-center">
+                                <input class=" rounded-lg outline-none py-5 pl-3 h-[32px] w-[150px] " type="text"
+                                    placeholder="Search">
+                                <button
+                                    class="bg-main-color text-lg font-semibold text-white rounded-lg w-[32px] h-[52px]"><i
+                                        class="fa-solid fa-magnifying-glass text-black"></i>
+                                </button>
+                            </div>
+                            <li><a class="">Home</a></li>
+                            <li><a class="p-2 text-[#424247]">About</a></li>
+                            <li><a class="p-2 text-[#424247]">Pages</a></li>
+                            <li><a class="p-2 text-[#424247]">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex justify-end items-center lg:ml-10">
+                        <a class="btn btn-ghost text-3xl lg:text-4xl">Hockey <span
+                                class="text-button-color font-font-manrope">’</span>s</a>
+                    </div>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a class="text-button-color">Home</a></li>
+                        <li><a class="p-2 text-[#424247]">About</a></li>
+                        <li><a class="p-2 text-[#424247]">Pages</a></li>
+                        <li><a class="p-2 text-[#424247]">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end gap-6">
+                    <button class="btn btn-active btn-primary">Primary</button>
+                </div>
+            </div>
+        </nav>
+        <!-- banner section  -->
+        <section class=" lg:mx-[105px] ">
+            <div
+                class="h-64 lg:h-[550px] bg-cover bg-no-repeat bg-center rounded-3xl bg-[url('images/banner.png')] flex flex-col justify-center items-center gap-2 lg:gap-7">
+                <h1 class="text-white font-extrabold text-3xl lg:text-6xl w-[340px] lg:w-[700px] text-center ">
+                    End-to-End Travel with <span class="text-[#1DD100]">P Paribahan</span></h1>
+                <p class="text-white w-[310px] lg:w-[670px] text-center text-sm lg:text-base">Embark on seamless
+                    journeys! Book bus tickets effortlessly. Comfort, convenience, and destinations await. Your
+                    adventure begins with us.</p>
+                <button class="btn w-28 text-[#1DD100] pl-3 lg:p-0">Buy Tickets</button>
+            </div>
+            <!-- banner card section -->
+            <div class="flex flex-col lg:flex-row justify-center items-center gap-0 lg:gap-7 mt-4 lg:mt-[-70px]">
+                <!-- card-1 -->
+                <div class="flex gap-2 justify-center items-center w-[250px] h-32 bg-white font-inter shadow-lg shadow-green-500/90 rounded-3xl mb-10">
+                    <div><img src="images/people.png" alt=""></div>
+                    <div>
+                        <h3 class="text-3xl font-bold">500k</h3>
+                        <p>Registered users</p>
+                    </div>
+                </div>
+                <!-- card-2 -->
+                <div class="flex gap-2 justify-center items-center w-[250px] h-32 bg-white font-inter shadow-lg shadow-green-500/90 rounded-3xl mb-10">
+                    <div><img src="images/ticket-cupon.png" alt=""></div>
+                    <div>
+                        <h3 class="text-3xl font-bold">500k</h3>
+                        <p>Registered users</p>
+                    </div>
+                </div>
+                <!-- card-3 -->
+                <div class="flex gap-2 justify-center items-center w-[250px] h-32 bg-white font-inter shadow-lg shadow-green-500/90 rounded-3xl mb-10">
+                    <div><img src="images/stoppage.png" alt=""></div>
+                    <div>
+                        <h3 class="text-3xl font-bold">500k</h3>
+                        <p>Registered users</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
 
     <script src="script/utility.js"></script>
+
 </body>
 
 </html>
