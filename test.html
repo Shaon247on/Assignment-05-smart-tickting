@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Selection Module</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <style>
+    .item-card {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body class="bg-gray-200 p-8">
+
+<h2 class="text-2xl font-bold mb-4">Select up to 4 items</h2>
+
+<div id="item-container" class="flex flex-wrap">
+  <!-- Dynamically generated item cards -->
+</div>
+
+<h2 class="text-2xl font-bold mt-8">Selected Items</h2>
+
+<table class="table-auto mt-4">
+  <thead>
+    <tr>
+      <th class="px-4 py-2">Item</th>
+      <th class="px-4 py-2">Cost</th>
+    </tr>
+  </thead>
+  <tbody id="selected-items">
+    <!-- Selected items will be dynamically added here -->
+  </tbody>
+  <tfoot>
+    <tr>
+      <td class="px-4 py-2 font-bold">Total:</td>
+      <td id="total-amount" class="px-4 py-2 font-bold">$0</td>
+    </tr>
+  </tfoot>
+</table>
+
+<script>
+  // Items data (40 items)
+  const items = Array.from({ length: 40 }, (_, index) => ({ id: index + 1, cost: 500 }));
+
+  // Function to dynamically generate item cards
+  function generateItemCards() {
+    const container = document.getElementById('item-container');
+    items.forEach(item => {
+      const card = document.createElement('div');
+      card.classList.add('item-card', 'cursor-pointer');
+      card.textContent = `Item ${item.id} - $${item.cost}`;
+      card.addEventListener('click', () => toggleSelection(item));
+      container.appendChild(card);
+    });
+  }
+
+  // Function to toggle item selection
+  function toggleSelection(item) {
+    const selectedItemsContainer = document.getElementById('selected-items');
+    const selectedItems = document.querySelectorAll('.selected-item');
+
+    if (selectedItems.length >= 4 && !selectedItemsContainer.querySelector(`#item-${item.id}`)) {
+      alert('You can select a maximum of 4 items.');
+      return;
+    }
+
+    const isSelected = selectedItemsContainer.querySelector(`#item-${item.id}`);
+
+    if (isSelected) {
+      isSelected.remove();
+    } else {
+      const row = document.createElement('tr');
+      row.id = `item-${item.id}`;
+      row.classList.add('selected-item');
+      row.innerHTML = `
+        <td class="px-4 py-2">${item.id}</td>
+        <td class="px-4 py-2">$${item.cost}</td>
+      `;
+      selectedItemsContainer.appendChild(row);
+    }
+
+    updateTotalAmount();
+  }
+
+  // Function to update the total amount
+  function updateTotalAmount() {
+    const selectedItems = document.querySelectorAll('.selected-item');
+    let totalAmount = 0;
+
+    selectedItems.forEach(item => {
+      const cost = parseInt(item.querySelector('td:last-child').textContent.replace('$', ''));
+      totalAmount += cost;
+    });
+
+    document.getElementById('total-amount').textContent = `$${totalAmount}`;
+  }
+
+  // Initialize the module
+  generateItemCards();
+</script>
+
+</body>
+</html>
