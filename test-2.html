@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Button Color on Click</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-200 p-8">
+
+<button id="colorChangeButton" class="bg-blue-500 text-white py-2 px-4 rounded-md">
+  Click me to change color
+</button>
+
+<script>
+  function changeColor(buttonID){
+    const colorChangeButton = document.getElementById(buttonID);
+
+  colorChangeButton.addEventListener('click', function() {
+    // Toggle between background colors
+    colorChangeButton.classList.toggle('bg-blue-500');
+    colorChangeButton.classList.toggle('bg-green-500');
+  });
+  }
+  changeColor('colorChangeButton')
+
+</script>
+
+</body>
+</html>
