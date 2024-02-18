@@ -3,32 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enable Button Example</title>
+  <title>Enable Submit Button Example</title>
 </head>
 <body>
 
-<!-- Input Field -->
-<input type="text" id="promoInput" placeholder="Enter promo code">
+<!-- Grand Total Section -->
+<div id="grandTotalSection">
+  <h2>Grand Total: $<span id="grandTotal">0.00</span></h2>
+</div>
 
-<!-- Button -->
+<!-- Phone Number Input -->
+<label for="phoneNumber">Phone Number:</label>
+<input type="text" id="phoneNumber">
+
+<!-- Submit Button -->
 <button id="submitButton" disabled>Submit</button>
 
 <script>
-  // Get the input and button elements
-  const promoInput = document.getElementById('promoInput');
+  // Get the grand total, phone number input, and submit button elements
+  const grandTotalElement = document.getElementById('grandTotal');
+  const phoneNumberInput = document.getElementById('phoneNumber');
   const submitButton = document.getElementById('submitButton');
 
-  // Add an input event listener
-  promoInput.addEventListener('input', function() {
-    // Check if the input value is "NEW15"
-    if (promoInput.value === 'NEW15') {
-      // Enable the button
-      submitButton.removeAttribute('disabled');
-    } else {
-      // Disable the button
-      submitButton.setAttribute('disabled', 'true');
-    }
+  // Initial grand total
+  let grandTotal = 4;
+
+  // Display initial grand total
+  updateGrandTotal();
+
+  // Add input event listener to the phone number input
+  phoneNumberInput.addEventListener('input', function() {
+    // Check if both grand total is above 0 and phone number input is not empty
+    submitButton.disabled = !(grandTotal > 0 && phoneNumberInput.value.trim() !== '');
   });
+
+  // Function to update and display the grand total
+  function updateGrandTotal() {
+    grandTotalElement.textContent = grandTotal.toFixed(2);
+    // Assume the grand total is calculated dynamically (e.g., from other parts of your application)
+    // In a real-world scenario, you would update this value accordingly.
+  }
 </script>
 
 </body>

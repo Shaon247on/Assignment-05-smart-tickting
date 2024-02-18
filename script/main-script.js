@@ -3,6 +3,8 @@ let count = 40;
 let booked = 0;
 for (const btn of allSelector) {
     btn.addEventListener('click', function (e) {
+        e.classList
+               
         btn.classList.toggle('bg-[#1DD100]')
         count -= 1
         setInnerText('available-seat', count)
@@ -42,17 +44,90 @@ function setInnerText(id, value) {
     const availableSeat = document.getElementById(id)
     availableSeat.innerText = value
 }
+// coupon applying section
+
 const input = document.getElementById('coupon-input')
 const coupneButton = document.getElementById('coupon-button')
-input.addEventListener('input',function(){
-    if (input.value === 'NEW15'|| input.value === 'Couple 20') {
+input.addEventListener('input', function () {
+    if (input.value === 'NEW15') {
         coupneButton.removeAttribute('disabled')
         coupneButton.addEventListener('click', function () {
-                coupneButton.classList.add('hidden')
-                input.classList.add('hidden')
-    })}
-    else{
+            const grandTotal = document.getElementById('grand-total').innerText
+            const convertedGrandTotal = parseInt(grandTotal)
+            const dicountedPrice = convertedGrandTotal * 15 / 100
+            const sum = convertedGrandTotal - dicountedPrice
+            console.log(sum)
+            document.getElementById('grand-total').innerText = sum
+            coupneButton.classList.add('hidden')
+            input.classList.add('hidden')
+        })
+    }
+    else if (input.value === 'Couple 20') {
+        coupneButton.removeAttribute('disabled')
+        coupneButton.addEventListener('click', function () {
+            const grandTotal = document.getElementById('grand-total').innerText
+            const convertedGrandTotal = parseInt(grandTotal)
+            const dicountedPrice = convertedGrandTotal * 20 / 100
+            const sum = convertedGrandTotal - dicountedPrice
+            console.log(sum)
+            document.getElementById('grand-total').innerText = sum
+            coupneButton.classList.add('hidden')
+            input.classList.add('hidden')
+        })
+    }
+    else {
         coupneButton.setAttribute('disabled', 'true')
     }
-    
 })
+
+
+
+const phoneNumberInputField = document.getElementById('Phone-number')
+const submitButton = document.getElementById('submit-button')
+phoneNumberInputField.addEventListener('input', function () {
+    if (phoneNumberInputField.value !== '') {
+        submitButton.removeAttribute('disabled')
+
+    }
+    else {
+        submitButton.setAttribute('disabled', 'true')
+    }
+})
+
+
+function scrollToBookingSection(){
+    window.scrollTo({
+        top: document.getElementById('paribahan-section').offsetTop,
+        behavior: 'smooth'
+      });
+}
+
+function hideSectionButton(){
+    const successSection = document.getElementById('success-section')
+    successSection.classList.remove('hidden')
+    const header = document.getElementById('header-section')
+    header.classList.add('hidden')
+    const main = document.getElementById('main-section')
+    main.classList.add('hidden')
+    const footer = document.getElementById('footer-section')
+    footer.classList.add('hidden')
+
+}
+function showSectionButton(){
+    const header = document.getElementById('header-section')
+    header.classList.remove('hidden')
+    const main = document.getElementById('main-section')
+    main.classList.remove('hidden')
+    const footer = document.getElementById('footer-section')
+    footer.classList.remove('hidden')
+    const successSection = document.getElementById('success-section-section')
+    successSection.classList.add('hidden')
+}
+
+
+
+
+
+
+
+
