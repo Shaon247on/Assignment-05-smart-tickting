@@ -3,27 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Change Button Color on Click</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <title>Target All Table Cells in JS</title>
 </head>
-<body class="bg-gray-200 p-8">
+<body>
 
-<button id="colorChangeButton" class="bg-blue-500 text-white py-2 px-4 rounded-md">
-  Click me to change color
-</button>
+<table id="myTable">
+  <tr>
+    <td>Row 1, Cell 1</td>
+    <td>Row 1, Cell 2</td>
+    <td>Row 1, Cell 3</td>
+  </tr>
+  <tr>
+    <td>Row 2, Cell 1</td>
+    <td>Row 2, Cell 2</td>
+    <td>Row 2, Cell 3</td>
+  </tr>
+  <!-- More rows... -->
+</table>
 
 <script>
-  function changeColor(buttonID){
-    const colorChangeButton = document.getElementById(buttonID);
-
-  colorChangeButton.addEventListener('click', function() {
-    // Toggle between background colors
-    colorChangeButton.classList.toggle('bg-blue-500');
-    colorChangeButton.classList.toggle('bg-green-500');
+  // Target all td elements in the table with ID "myTable"
+  const allTableCells = document.querySelectorAll('#myTable td');
+  const elementClasses = Array.from(allTableCells.classList);
+    console.log(allTableCells)
+    console.log(elementClasses)
+  // Example: Change background color of all td elements
+  allTableCells.forEach(cell => {
+    cell.style.backgroundColor = 'lightblue';
   });
-  }
-  changeColor('colorChangeButton')
-
 </script>
 
 </body>

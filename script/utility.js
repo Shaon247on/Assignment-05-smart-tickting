@@ -63,3 +63,9 @@ handlingClick('J1')
 handlingClick('J2')
 handlingClick('J3')
 handlingClick('J4')
+
+
+const selectedItems = document.querySelectorAll('account-containter');
+const selectedItems2 = document.querySelectorAll('all-botton');
+console.log(selectedItems)
+console.log(selectedItems2)
