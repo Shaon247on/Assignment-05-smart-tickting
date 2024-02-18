@@ -3,33 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Target All Table Cells in JS</title>
+  <title>Enable Button Example</title>
 </head>
 <body>
 
-<table id="myTable">
-  <tr>
-    <td>Row 1, Cell 1</td>
-    <td>Row 1, Cell 2</td>
-    <td>Row 1, Cell 3</td>
-  </tr>
-  <tr>
-    <td>Row 2, Cell 1</td>
-    <td>Row 2, Cell 2</td>
-    <td>Row 2, Cell 3</td>
-  </tr>
-  <!-- More rows... -->
-</table>
+<!-- Input Field -->
+<input type="text" id="promoInput" placeholder="Enter promo code">
+
+<!-- Button -->
+<button id="submitButton" disabled>Submit</button>
 
 <script>
-  // Target all td elements in the table with ID "myTable"
-  const allTableCells = document.querySelectorAll('#myTable td');
-  const elementClasses = Array.from(allTableCells.classList);
-    console.log(allTableCells)
-    console.log(elementClasses)
-  // Example: Change background color of all td elements
-  allTableCells.forEach(cell => {
-    cell.style.backgroundColor = 'lightblue';
+  // Get the input and button elements
+  const promoInput = document.getElementById('promoInput');
+  const submitButton = document.getElementById('submitButton');
+
+  // Add an input event listener
+  promoInput.addEventListener('input', function() {
+    // Check if the input value is "NEW15"
+    if (promoInput.value === 'NEW15') {
+      // Enable the button
+      submitButton.removeAttribute('disabled');
+    } else {
+      // Disable the button
+      submitButton.setAttribute('disabled', 'true');
+    }
   });
 </script>
 
