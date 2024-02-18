@@ -3,33 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scroll Example</title>
+  <title>Item Selection Example</title>
 </head>
 <body>
-  <button onclick="scrollToSection2()">Scroll to Section 2</button>
-<!-- Content Section 1 -->
-<section id="section1" style="height: 500px; background-color: lightblue;">
-  <h2>Section 1</h2>
-  <!-- Your content for Section 1 goes here -->
-</section>
 
-<!-- Content Section 2 -->
-<section id="section2" style="height: 500px; background-color: lightgreen;">
-  <h2>Section 2</h2>
-  <!-- Your content for Section 2 goes here -->
-</section>
+<!-- Items with prices -->
+<ul id="itemsList">
+  <li data-id="1" data-price="2">Item 1 - $2</li>
+  <li data-id="2" data-price="3">Item 2 - $3</li>
+  <li data-id="3" data-price="1">Item 3 - $1</li>
+  <li data-id="4" data-price="4">Item 4 - $4</li>
+  <li data-id="5" data-price="1">Item 5 - $1</li>
+  <li data-id="6" data-price="2">Item 6 - $2</li>
+  <li data-id="7" data-price="3">Item 7 - $3</li>
+  <li data-id="8" data-price="2">Item 8 - $2</li>
+</ul>
 
-<!-- Scroll Button -->
-
+<!-- Selected Items and Total Amount -->
+<div>
+  <h3>Selected Items:</h3>
+  <ul id="selectedItems"></ul>
+  <p>Total Amount: $<span id="totalAmount">0</span></p>
+</div>
 
 <script>
-  // Function to scroll to Section 2
-  function scrollToSection2() {
-    window.scrollTo({
-      top: document.getElementById('section2').offsetTop,
-      behavior: 'smooth'
-    });
+  // Track selected items and their amounts
+  const selectedItems = new Map();
+  let totalAmount = 0;
+
+  // Function to handle item selection
+  function selectItem(item) {
+    const itemId = item.dataset.id;
+    const itemPrice = parseInt(item.dataset.price);
+
+    // Check if the item is already selected
+    if (selectedItems.has(itemId)) {
+      // Deselect the item
+      selectedItems.delete(itemId);
+      totalAmount -= itemPrice;
+    } else {
+      // Check if the maximum selection limit is reached
+      if (selectedItems.size < 4 && totalAmount + itemPrice <= 8) {
+        // Select the item
+        selectedItems.set(itemId, itemPrice);
+        totalAmount += itemPrice;
+      } else {
+        alert("Maximum selection limit (4 items) or total amount limit (8) reached!");
+      }
+    }
+
+    // Update the UI
+    updateUI();
   }
+
+  // Function to update the UI
+  function updateUI() {
+    const selectedItemsList = document.getElementById('selectedItems');
+    const totalAmountElement = document.getElementById('totalAmount');
+
+    // Clear the previous content
+    selectedItemsList.innerHTML = "";
+
+    // Display selected items and total amount
+    for (const [itemId, itemPrice] of selectedItems) {
+      const listItem = document.createElement('li');
+      listItem.textContent = `Item ${itemId} - $${itemPrice}`;
+      selectedItemsList.appendChild(listItem);
+    }
+
+    totalAmountElement.textContent = totalAmount;
+  }
+
+  // Add click event listener to each item
+  const itemsList = document.getElementById('itemsList');
+  itemsList.addEventListener('click', function (event) {
+    if (event.target.tagName === 'LI') {
+      selectItem(event.target);
+    }
+  });
 </script>
 
 </body>

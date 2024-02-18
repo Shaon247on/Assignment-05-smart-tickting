@@ -3,13 +3,19 @@ let count = 40;
 let booked = 0;
 for (const btn of allSelector) {
     btn.addEventListener('click', function (e) {
-        e.classList
-               
+        const bookedSeat = document.getElementById('booked-seat').innerText
+        const convertedBookedSeat = parseInt(bookedSeat)
+        console.log(convertedBookedSeat)
+        if (convertedBookedSeat.innerText >= 4) {
+            alert('You have already selection max amount of seats')
+        }
+        else{
         btn.classList.toggle('bg-[#1DD100]')
         count -= 1
         setInnerText('available-seat', count)
         booked += 1
         setInnerText('booked-seat', booked)
+
         const seatName = e.target.innerText
         const seatType = 'Economy'
         const seatPrice = 550
@@ -30,7 +36,7 @@ for (const btn of allSelector) {
         totalCost('total-amount', seatPrice)
 
         totalCost('grand-total', seatPrice)
-    })
+}})
 }
 
 function totalCost(id, value) {
@@ -95,14 +101,14 @@ phoneNumberInputField.addEventListener('input', function () {
 })
 
 
-function scrollToBookingSection(){
+function scrollToBookingSection() {
     window.scrollTo({
         top: document.getElementById('paribahan-section').offsetTop,
         behavior: 'smooth'
-      });
+    });
 }
 
-function hideSectionButton(){
+function hideSectionButton() {
     const successSection = document.getElementById('success-section')
     successSection.classList.remove('hidden')
     const header = document.getElementById('header-section')
@@ -113,7 +119,7 @@ function hideSectionButton(){
     footer.classList.add('hidden')
 
 }
-function showSectionButton(){
+function showSectionButton() {
     const header = document.getElementById('header-section')
     header.classList.remove('hidden')
     const main = document.getElementById('main-section')
