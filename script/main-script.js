@@ -1,44 +1,48 @@
+// Selection of seat section
 const allSelector = document.getElementsByClassName('selector')
 let count = 40;
 let booked = 0;
 for (const btn of allSelector) {
     btn.addEventListener('click', function (e) {
-        // adding limits
-
         const availableSeat = document.getElementById('available-seat').innerText
-        const convertedAvailableSeat = parseInt(availableSeat)
-        if (convertedAvailableSeat.innerText < 36) {
+        let convertedAvailableSeat = parseInt(availableSeat)
+        
+        console.log(convertedAvailableSeat)
+        if (convertedAvailableSeat < 37) {
             console.log(availableSeat)
             alert("You have")
         }
+        else {            
+            btn.classList.toggle('bg-[#1DD100]')
+            count -= 1
+            setInnerText('available-seat', count)
+            booked += 1
+            setInnerText('booked-seat', booked)
+
+            const seatName = e.target.innerText
+            const seatType = 'Economy'
+            const seatPrice = 550
+            const accountContainer = document.getElementById('account-container')
+            const tr = document.createElement('tr')
+            const td = document.createElement('td')
+            td.classList.add('text-start')
+            td.innerText = seatName
+            const td2 = document.createElement('td')
+            td2.innerText = seatType
+            const td3 = document.createElement('td')
+            td3.classList.add('text-end')
+            td3.innerText = 550
+            tr.appendChild(td)
+            tr.appendChild(td2)
+            tr.appendChild(td3)
+            accountContainer.appendChild(tr)
+            totalCost('total-amount', seatPrice)
+            totalCost('grand-total', seatPrice)
+
+        }
 
 
-        btn.classList.toggle('bg-[#1DD100]')
-        count -= 1
-        setInnerText('available-seat', count)
-        booked += 1
-        setInnerText('booked-seat', booked)
 
-        const seatName = e.target.innerText
-        const seatType = 'Economy'
-        const seatPrice = 550
-        const accountContainer = document.getElementById('account-container')
-        const tr = document.createElement('tr')
-        const td = document.createElement('td')
-        td.classList.add('text-start')
-        td.innerText = seatName
-        const td2 = document.createElement('td')
-        td2.innerText = seatType
-        const td3 = document.createElement('td')
-        td3.classList.add('text-end')
-        td3.innerText = 550
-        tr.appendChild(td)
-        tr.appendChild(td2)
-        tr.appendChild(td3)
-        accountContainer.appendChild(tr)
-        totalCost('total-amount', seatPrice)
-        totalCost('grand-total', seatPrice)
-        
     })
 }
 
@@ -109,6 +113,8 @@ phoneNumberInputField.addEventListener('input', function () {
 })
 
 
+
+
 function scrollToBookingSection() {
     window.scrollTo({
         top: document.getElementById('paribahan-section').offsetTop,
@@ -135,8 +141,10 @@ function showSectionButton() {
     const footer = document.getElementById('footer-section')
     footer.classList.remove('hidden')
     const successSection = document.getElementById('success-section-section')
-    successSection.classList.add('hidden')
+    successSection.classList.add('hidden')    
 }
+
+
 
 
 
