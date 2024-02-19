@@ -1,24 +1,22 @@
-// Selection of seat section
+// Selection of seat script
 const allSelector = document.getElementsByClassName('selector')
 let count = 40;
 let booked = 0;
+
 for (const btn of allSelector) {
+    
     btn.addEventListener('click', function (e) {
         const availableSeat = document.getElementById('available-seat').innerText
-        let convertedAvailableSeat = parseInt(availableSeat)
-        
-        console.log(convertedAvailableSeat)
+        let convertedAvailableSeat = parseInt(availableSeat)        
         if (convertedAvailableSeat < 37) {
-            console.log(availableSeat)
-            alert("You have")
+            alert("You have selected maximum number of seats")
         }
-        else {            
+        else {       
             btn.classList.toggle('bg-[#1DD100]')
             count -= 1
             setInnerText('available-seat', count)
             booked += 1
             setInnerText('booked-seat', booked)
-
             const seatName = e.target.innerText
             const seatType = 'Economy'
             const seatPrice = 550
@@ -37,8 +35,7 @@ for (const btn of allSelector) {
             tr.appendChild(td3)
             accountContainer.appendChild(tr)
             totalCost('total-amount', seatPrice)
-            totalCost('grand-total', seatPrice)
-
+            totalCost('grand-total', seatPrice)                                  
         }
 
 
@@ -46,18 +43,8 @@ for (const btn of allSelector) {
     })
 }
 
-function totalCost(id, value) {
-    const totalAmount = document.getElementById(id).innerText;
-    const convertedTotalAmount = parseInt(totalAmount)
-    const sum = convertedTotalAmount + value
-    setInnerText(id, sum)
-}
 
-function setInnerText(id, value) {
-    const availableSeat = document.getElementById(id)
-    availableSeat.innerText = value
-}
-// coupon applying section
+// coupon applying script
 
 const input = document.getElementById('coupon-input')
 const coupneButton = document.getElementById('coupon-button')
@@ -98,7 +85,7 @@ input.addEventListener('input', function () {
     }
 })
 
-
+// "Submit" button enable script
 
 const phoneNumberInputField = document.getElementById('Phone-number')
 const submitButton = document.getElementById('submit-button')
@@ -113,7 +100,7 @@ phoneNumberInputField.addEventListener('input', function () {
 })
 
 
-
+// "Buy Now" button scroll script
 
 function scrollToBookingSection() {
     window.scrollTo({
@@ -121,6 +108,8 @@ function scrollToBookingSection() {
         behavior: 'smooth'
     });
 }
+
+//"Submit" button linked script
 
 function hideSectionButton() {
     const successSection = document.getElementById('success-section')
@@ -133,6 +122,9 @@ function hideSectionButton() {
     footer.classList.add('hidden')
 
 }
+
+//"Continue" button linked script
+
 function showSectionButton() {
     const header = document.getElementById('header-section')
     header.classList.remove('hidden')
@@ -143,13 +135,3 @@ function showSectionButton() {
     const successSection = document.getElementById('success-section-section')
     successSection.classList.add('hidden')    
 }
-
-
-
-
-
-
-
-
-
-

@@ -394,7 +394,7 @@
                         <tbody class="mt-10">
                             <tr class="w-full font-bold hidden" id="discounted-amount">
                                 <td class="text-start" colspan="2">Discounted Amount</td>
-                                <td  class=" text-end">BDT <span id="discounted-cost">0</span></td>
+                                <td class=" text-end">BDT <span id="discounted-cost">0</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -406,7 +406,7 @@
 
                     </div>
                     <div>
-                        
+
                     </div>
                     <div class=" border-t-2 border-dashed border-gray-300 pt-5">
                         <table class="w-full">
@@ -429,36 +429,45 @@
                         <input type="email" id="email" name="email" required placeholder="Enter your email id"
                             class="h-12 rounded-lg pl-7">
 
-                        <button class="btn bg-[#1DD100] text-white" disabled id="submit-button" onclick="hideSectionButton()"> Submit</button>
+                        <button class="btn bg-[#1DD100] text-white" disabled id="submit-button"
+                            onclick="hideSectionButton()"> Submit</button>
                     </form>
                 </div>
             </div>
         </section>
+
         <!-- js link section  -->
         <script src="script/main-script.js"></script>
+        <script src="script/utility.js"></script>
     </main>
+
     <!-- POP UP section -->
-    <section id="success-section"  class=" hidden ">
-        <div  class="flex flex-col justify-center items-center  min-h-screen min-w-full ">
+    <section id="success-section" class=" hidden ">
+        <div class="flex flex-col justify-center items-center  min-h-screen min-w-full ">
             <img src="images/success.png" alt="" class="mb-7">
             <h1 class="uppercase mb-7 font-roboto text-2xl font-bold text-[#27AE60]">success</h1>
             <p class="w-[290px] lg:w-[480px] text-center font-bold mb-3">Thank you for Booking Our Bus Seats. <br>
                 We are working hard to find the best service and deals for you.
             </p>
             <p class="text-base lg:text-[20px] font-light mb-7">Shortly you will find a confirmation in your email.</p>
-            <button class="btn rounded-2xl w-44 bg-[#27AE60]" onclick="showSectionButton()">Continue</button>
+            <button class="btn rounded-2xl w-44 bg-[#27AE60]" onclick="showSectionButton()"
+                id="continue">Continue</button>
         </div>
     </section>
+
+    <!-- footer section  -->
     <footer id="footer-section">
         <div class="bg-[#030712] text-white font-relaway">
-            <div class="flex flex-col lg:flex-row gap-8 lg:gap-0 justify-start lg:justify-between items-start lg:items-center pt-28 pb-8 mx-8 lg:mx-28 border-b-2 border-dashed border-white">
+            <div
+                class="flex flex-col lg:flex-row gap-8 lg:gap-0 justify-start lg:justify-between items-start lg:items-center pt-28 pb-8 mx-8 lg:mx-28 border-b-2 border-dashed border-white">
                 <div>
                     <h1 class="text-white text-4xl font-extrabold mb-4">Pakhi Paribahan</h1>
                     <p class="w-[370px]">Pakhi Paribahan is a digital platform to make your daily commuting better.</p>
                 </div>
                 <div>
                     <p class="text-start lg:text-end text-[18px] mb-4 font-bold">Download our app</p>
-                    <div class="flex justify-center items-center gap-3 w-[200px]  border-2 border-white px-[10px] py-2 rounded-lg">
+                    <div
+                        class="flex justify-center items-center gap-3 w-[200px]  border-2 border-white px-[10px] py-2 rounded-lg">
                         <img src="images/playstore.png" alt="">
                         <div>
                             <p class="uppercase text-xs font-semibold">Get it on</p>
@@ -467,7 +476,8 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col lg:flex-row justify-start lg:justify-between items-start lg:items-center mx-8 lg:mx-28 pt-8 py-24 gap-12 lg:gap-0">
+            <div
+                class="flex flex-col lg:flex-row justify-start lg:justify-between items-start lg:items-center mx-8 lg:mx-28 pt-8 py-24 gap-12 lg:gap-0">
                 <div>
                     <p class="w-[50%] lg:w-full ">@all rights reserved, Pakhi Paribahan services limited.2024</p>
                 </div>
