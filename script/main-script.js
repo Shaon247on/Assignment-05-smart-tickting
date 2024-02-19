@@ -3,13 +3,16 @@ let count = 40;
 let booked = 0;
 for (const btn of allSelector) {
     btn.addEventListener('click', function (e) {
-        const bookedSeat = document.getElementById('booked-seat').innerText
-        const convertedBookedSeat = parseInt(bookedSeat)
-        console.log(convertedBookedSeat)
-        if (convertedBookedSeat.innerText >= 4) {
-            alert('You have already selection max amount of seats')
+        // adding limits
+
+        const availableSeat = document.getElementById('available-seat').innerText
+        const convertedAvailableSeat = parseInt(availableSeat)
+        if (convertedAvailableSeat.innerText < 36) {
+            console.log(availableSeat)
+            alert("You have")
         }
-        else{
+
+
         btn.classList.toggle('bg-[#1DD100]')
         count -= 1
         setInnerText('available-seat', count)
@@ -34,9 +37,9 @@ for (const btn of allSelector) {
         tr.appendChild(td3)
         accountContainer.appendChild(tr)
         totalCost('total-amount', seatPrice)
-
         totalCost('grand-total', seatPrice)
-}})
+        
+    })
 }
 
 function totalCost(id, value) {
@@ -54,6 +57,7 @@ function setInnerText(id, value) {
 
 const input = document.getElementById('coupon-input')
 const coupneButton = document.getElementById('coupon-button')
+const discountedAmount = document.getElementById('discounted-amount')
 input.addEventListener('input', function () {
     if (input.value === 'NEW15') {
         coupneButton.removeAttribute('disabled')
@@ -62,10 +66,12 @@ input.addEventListener('input', function () {
             const convertedGrandTotal = parseInt(grandTotal)
             const dicountedPrice = convertedGrandTotal * 15 / 100
             const sum = convertedGrandTotal - dicountedPrice
-            console.log(sum)
             document.getElementById('grand-total').innerText = sum
             coupneButton.classList.add('hidden')
             input.classList.add('hidden')
+            discountedAmount.classList.remove('hidden')
+            document.getElementById('discounted-cost').innerText = -dicountedPrice
+
         })
     }
     else if (input.value === 'Couple 20') {
@@ -79,6 +85,8 @@ input.addEventListener('input', function () {
             document.getElementById('grand-total').innerText = sum
             coupneButton.classList.add('hidden')
             input.classList.add('hidden')
+            discountedAmount.classList.remove('hidden')
+            document.getElementById('discounted-cost').innerText = -dicountedPrice
         })
     }
     else {
