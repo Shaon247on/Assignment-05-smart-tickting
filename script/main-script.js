@@ -133,5 +133,7 @@ function showSectionButton() {
     const footer = document.getElementById('footer-section')
     footer.classList.remove('hidden')
     const successSection = document.getElementById('success-section-section')
-    successSection.classList.add('hidden')    
+    successSection.classList.add('hidden')   
+    const selector = document.getElementsByClassName('selector') 
+    selector.classList.remove('bg-[#1DD100]')
 }
